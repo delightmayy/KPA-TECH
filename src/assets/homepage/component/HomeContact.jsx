@@ -14,8 +14,8 @@ const HomeContact = () => {
                 "
             >
               <img src={msgicon} alt="" width={75} className="mx-auto md:mx-0" />
-              <h4 className=" capitalize font-bold">get in touch with us</h4>
-              <p className="">
+              <h4 className=" capitalize text-lg md:text-2xl font-bold text-nowrap">get in touch with us</h4>
+              <p  className=" text-sm md:text-base leading-6 px-2">
               We're dedicated to providing exceptional service and support to every client, and we can't wait to assist you with your digital needs.
               </p>
             </div>

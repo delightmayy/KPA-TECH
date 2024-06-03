@@ -16,7 +16,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white z-40" >
       <header className="">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"

@@ -1,15 +1,17 @@
 import React from "react";
+import Header from "../../generalcomp/Header";
 
 const HomeHero = () => {
   return (
-    <div className="bg-[rgba(44,44,44,0.77)]">
+    <div className="bg-[rgba(44,44,44,0.77)]  ">
+      <Header/>
       <div className="relative  px-6 pt-8 lg:px-8">
-        <div className="mx-auto max-w-2xl py-24 sm:py-48 lg:py-40">
+        <div className="mx-auto max-w-2xl py-20 sm:py-10 lg:py-16 xl:py-28">
           <div className="text-center text-white">
-            <h1 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
+            <h1 className="text2xl font-bold tracking-tight md:text-4xl lg:text-5xl">
               Building and deploying innovative mobile and web solutions
             </h1>
-            <p className="mt-6 text-lg leading-8">
+            <p className="mt-6 text-sm md:text-base lg:text-lg leading-8">
               Elevate your business rapidly with our elite team of senior
               developers renowned for their world-class expertise and
               capabilities.

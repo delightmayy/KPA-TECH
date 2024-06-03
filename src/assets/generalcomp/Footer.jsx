@@ -1,6 +1,11 @@
 import { ArrowRightIcon } from "@heroicons/react/16/solid";
 import React from "react";
-import logo from "./logo2.png";
+import logo from "./Brandlogo.png";
+import facebook from "./social icon/facebook.png";
+import instagram from "./social icon/instagram.png";
+import twitter from "./social icon/twitter.png";
+import linkedin from "./social icon/linkedin.png";
+import youtube from "./social icon/youtube.png";
 
 const Footer = () => {
   return (
@@ -12,13 +17,10 @@ const Footer = () => {
             id="newsletter"
             className="p-4 grid grid-flow-row md:grid-cols-2 gap-4 justify-center items-center "
           >
-            <div className="">
-              <h4 className="">haedae</h4>
-              <p className="">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem quos eius ipsam perspiciatis officia aperiam,
-                similique dignissimos quis ad beatae! Eaque veritatis temporibus
-                incidunt similique odit officiis eum cupiditate quisquam?
+            <div className="px-4">
+              <h4 className="font-bold text-center md:text-start py-2">Subscribe to our newsletter to get latest news on your inbox.</h4>
+              <p  className=" text-sm md:text-base leading-6 text-center md:text-start">
+              By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.
               </p>
             </div>
             <div className="">
@@ -51,66 +53,66 @@ const Footer = () => {
           {/*  FOOTER BOTTOM */}
           <div
             id="footer"
-            className=" p-4 flex flex-col  md:flex-row gap-4  md:grid md:grid-cols-7 md:pt-6 border-b-2 "
+            className=" py-6 px-4 flex flex-col  md:flex-row gap-4  md:grid md:grid-cols-7 md:pt-6 border-b-2 "
           >
             {/* SIDE 1  */}
             <div className="flex justify-between md:justify-between px-4 md:col-span-4">
-              <div className=" flex flex-col gap-4 ">
-                <img src={logo} alt="" width={20} />
+              <div className=" text-sm md:text-base  md:flex flex-col gap-4 ">
+                <img src={logo} alt="" width={100} className="my-2" />
                 <div className="">
-                  <h5>address:</h5>
-                  <p>dashkvsaovsbpbpdbpddp</p>
+                  <h5 className="font-bold">Address:</h5>
+                  <p className=" text-xs"> Level 1, 12 Sample St,<br /> Sydney NSW 2000</p>
                 </div>
-                <div className="">
-                  <h5>contact:</h5>
-                  <p>dashkvsaovsbpbpdbpddp</p>
-                  <p>dashkvsaovsbpbpdbpddp</p>
+                <div className="py-2">
+                  <h5  className="font-bold">Contact</h5>
+                  <p className="text.xs">+1 (850) 346-5628</p>
+                  <p className="text.xs">info@kpatech.io</p>
                 </div>
-                <div className="flex gap-2">
-                  <img src={logo} alt="" width={20} />
-                  <img src={logo} alt="" width={20} />
-                  <img src={logo} alt="" width={20} />
-                  <img src={logo} alt="" width={20} />
-                  <img src={logo} alt="" width={20} />
+                <div className="flex gap-2 md:gap-3 my-3">
+                  <img src={facebook} alt="" width={24} />
+                  <img src={instagram} alt="" width={24} />
+                  <img src={twitter} alt="" width={16}  />
+                  <img src={linkedin} alt="" width={18} />
+                  <img src={youtube} alt="" width={18} />
                 </div>
               </div>
 
-              <div id="servicehead" className="">
+              <div id="servicehead" className=" ms-10 md:ms-0">
                 <nav>
-                  <h4>services</h4>
-                  <ul className="">
-                    <li className="">sczcskvsls</li>
-                    <li className="">sczcskvsls</li>
-                    <li className="">sczcskvsls</li>
-                    <li className="">sczcskvsls</li>
+                  <h4 className="py-4 font-bold">Services</h4>
+                  <ul className="text-sm md:text-base  md:flex flex-col gap-3">
+                    <li className="">Mobile App Development</li>
+                    <li className="">Web Application Development</li>
+                    <li className="">Website Development</li>
+                    <li className="">Google AdSense Earnings</li>
                   </ul>
                 </nav>
               </div>
             </div>
 
             {/* SIDE2 */}
-            <div className="flex justify-between px-4 md:col-span-3">
+            <div className="flex justify-between px-4 md:col-span-3 md:ps-20">
               <div id="caseshead" className="">
                 <nav>
-                  <h4>cases</h4>
-                  <ul className="">
-                    <li className="">gvsis;sb ;nas</li>
-                    <li className="">gvsis;sb ;nas</li>
-                    <li className="">gvsis;sb ;nas</li>
+                  <h4 className="py-4 font-bold">Cases</h4>
+                  <ul className=" text-sm md:text-base  md:flex flex-col gap-3">
+                    <li className="">Website Design</li>
+                    <li className="">Website Development</li>
+                    <li className="">Google Adsense</li>
                   </ul>
                 </nav>
               </div>
 
               <div id="quicklinkhead" className="">
                 <nav>
-                  <h4>quicklink</h4>
-                  <ul className="">
-                    <li className="">gcsukifvklnjbl</li>
-                    <li className="">gcsukifvklnjbl</li>
-                    <li className="">gcsukifvklnjbl</li>
-                    <li className="">gcsukifvklnjbl</li>
-                    <li className="">gcsukifvklnjbl</li>
-                    <li className="">gcsukifvklnjbl</li>
+                  <h4 className="py-4 font-bold">Quick Link</h4>
+                  <ul className="text-sm md:text-base md:flex flex-col gap-3">
+                    <li className="">Home</li>
+                    <li className="">About Us</li>
+                    <li className="">Blogs</li>
+                    <li className="">FAQs</li>
+                    <li className="">Contact Us</li>
+                   
                   </ul>
                 </nav>
               </div>
@@ -121,9 +123,9 @@ const Footer = () => {
 
       <section className="text-white bg-[#0d111c]">
         <div className="flex flex-col max-w-7xl mx-auto">
-          <div className=" flex justify-between p-4">
-            <p className="">nsls;ss'ss</p>
-            <p className="">/;kniuiyrsrr</p>
+          <div className=" flex justify-between px-8 py-4 text-xs">
+            <p className="">© 2024 KPA.Tech. All rights reserved.</p>
+            <p className="">Terms of Service</p>
           </div>
         </div>
       </section>

@@ -13,10 +13,10 @@ const OurService = () => {
       <div className="flex flex-col bg-white p-2 text-center sm:text-start sm:py-4 sm:px-6 ">
         <div className="flex  max-w-7xl flex-col justify-center items-center mx-auto ">
           <div className="p-3 gap-4  text-center text-black flex flex-col">
-            <h3 className=" mx-auto w-4/5 sm:text-2xl lg:text-4xl font-semibold">
+            <h3 className=" mx-auto w-4/5 text-lg sm:text-2xl lg:text-4xl font-bold">
               Our Services
             </h3>
-            <p className="text lg:text-lg">
+            <p className="text-sm md:text-base lg:text-lg">
               We pride ourselves on offering tailored services designed to meet
               your unique business needs.
             </p>
@@ -28,7 +28,7 @@ const OurService = () => {
                 return (
                   <div
                     key={x.img}
-                    className=" flex flex-col gap-2 py-6 px-2 self-center sm:text-justify"
+                    className=" flex flex-col gap-2 my-3 md:my-6 px-2 self-justify "
                     id={x.id}
                     style={{
                       color: x.id == imgstate ? "#0095ff" : "black",
