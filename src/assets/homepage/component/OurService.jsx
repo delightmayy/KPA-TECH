@@ -22,7 +22,7 @@ const OurService = () => {
             </p>
           </div>
 
-          <div className="p-3 lg:grid flex flex-col-reverse lg:grid-cols-2">
+          <div className="p-3 lg:grid flex flex-col-reverse lg:grid-cols-2 md:m-6">
             <div className="p-2 md:col-span-1 grid grid-flow-row">
               {serviceData.map((x) => {
                 return (

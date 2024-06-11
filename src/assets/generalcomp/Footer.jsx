@@ -53,7 +53,7 @@ const Footer = () => {
           {/*  FOOTER BOTTOM */}
           <div
             id="footer"
-            className=" py-6 px-4 flex flex-col  md:flex-row gap-4  md:grid md:grid-cols-7 md:pt-6 border-b-2 "
+            className=" py-6 px-4 flex flex-col  md:flex-row gap-4  md:grid md:grid-cols-7 md:pt-6 border-b-2 border-sky-600 "
           >
             {/* SIDE 1  */}
             <div className="flex justify-between md:justify-between px-4 md:col-span-4">
@@ -68,7 +68,7 @@ const Footer = () => {
                   <p className="text.xs">+1 (850) 346-5628</p>
                   <p className="text.xs">info@kpatech.io</p>
                 </div>
-                <div className="flex gap-2 md:gap-3 my-3">
+                <div className="flex gap-2 md:gap-3 my-3 cursor-pointer">
                   <img src={facebook} alt="" width={24} />
                   <img src={instagram} alt="" width={24} />
                   <img src={twitter} alt="" width={16}  />
@@ -80,7 +80,7 @@ const Footer = () => {
               <div id="servicehead" className=" ms-10 md:ms-0">
                 <nav>
                   <h4 className="py-4 font-bold">Services</h4>
-                  <ul className="text-sm md:text-base  md:flex flex-col gap-3">
+                  <ul className="text-sm md:text-base  md:flex flex-col gap-3 cursor-pointer">
                     <li className="">Mobile App Development</li>
                     <li className="">Web Application Development</li>
                     <li className="">Website Development</li>
@@ -95,7 +95,7 @@ const Footer = () => {
               <div id="caseshead" className="">
                 <nav>
                   <h4 className="py-4 font-bold">Cases</h4>
-                  <ul className=" text-sm md:text-base  md:flex flex-col gap-3">
+                  <ul className=" text-sm md:text-base  md:flex flex-col gap-3 cursor-pointer">
                     <li className="">Website Design</li>
                     <li className="">Website Development</li>
                     <li className="">Google Adsense</li>
@@ -106,7 +106,7 @@ const Footer = () => {
               <div id="quicklinkhead" className="">
                 <nav>
                   <h4 className="py-4 font-bold">Quick Link</h4>
-                  <ul className="text-sm md:text-base md:flex flex-col gap-3">
+                  <ul className="text-sm md:text-base md:flex flex-col gap-3 cursor-pointer">
                     <li className="">Home</li>
                     <li className="">About Us</li>
                     <li className="">Blogs</li>

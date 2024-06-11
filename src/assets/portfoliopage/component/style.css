@@ -1,0 +1,5 @@
+.li:hover,
+.li:active,.topbar :active {
+  color: white;
+  background-color: #1066a3;
+}

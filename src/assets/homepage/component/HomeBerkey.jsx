@@ -47,7 +47,7 @@ const HomeBerkey = () => {
           </div>
         </div>
 
-        <div className=" mx-auto md:mt-12 lg:mt-20 gap-0 sm:mx-0 flex flex-col justify-center items-center ">
+        <div className=" mx-auto md:mt-12 lg:mt-8 gap-0 sm:mx-0 flex flex-col justify-center items-center ">
            <div className="md:mt-0">
             <img src={berkey22} alt="" />
            </div>

@@ -35,7 +35,7 @@ const HomeFlagship = () => {
                   access to expertly-selected baskets of cryptocurrencies
                   focused on your favorite sector.
                 </p>
-                <button className=" md:w-2/3  lg:w-1/3 p-1  rounded-lg bg-yellow-400  hover:bg-white hover:text-yellow-400 my-2 ">
+                <button className=" md:w-2/3  lg:w-1/3 p-1 font-semibold rounded-lg bg-yellow-400  hover:bg-white hover:text-yellow-400 my-2 ">
                   NDA Protected
                 </button>
               </div>
@@ -52,14 +52,14 @@ const HomeFlagship = () => {
             </div>
 
             <div className="p-2 mx-auto mt-8 mb-6 sm:mx-0 flex justify-center pb-16 items-center  ">
-              <img src={flag3} alt="" width={230} />
+              <img src={flag3} alt="" width={240}  className="lg:-ms-20"/>
             </div>
           </div>
           
         </div>
 
       </section>
-      <div className="w-full hidden lg:block bg-gradient-to-r from-[#2554B7] to-[#1472BC] lg:-mt-48   ">
+      <div className="w-full hidden lg:block bg-gradient-to-bl to-[#2554B7] from-[#157dcd] lg:-mt-48   ">
             <img src={flag4} alt="" className="w-full" />
           </div>
     </>

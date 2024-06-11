@@ -7,16 +7,17 @@ import { Link, NavLink } from "react-router-dom";
 
 const navigation = [
   { name: "Home", to: "/" },
-  { name: "Services", to: "/Services" },
+
   { name: "Porfolio", to: "/Portfolio" },
-  { name: "Blogs", to: "/Blogs" },
+  { name: "About Us", to: "/About" },
   { name: "Contact Us", to: "/Contact" },
+  { name: "Services", to: "/Services" },
 ];
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white z-40" >
+    <div className="bg-white z-40">
       <header className="">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
@@ -33,7 +34,6 @@ const Header = () => {
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(true)}
-              
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -45,13 +45,15 @@ const Header = () => {
                 key={item.name}
                 to={item.to}
                 className="text-sm font-semibold leading-6 text-gray-900 Link"
-                style={({ isActive }) => ({ color: isActive ? "blue" : "black" })}
+                style={({ isActive }) => ({
+                  color: isActive ? "blue" : "black",
+                })}
               >
                 {item.name}
               </NavLink>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end " >
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
             <Link
               to="#"
               className="text-sm font-semibold leading-6 text-gray-900 capitalize p-2 rounded-lg border bg-sky-500 hover:border-sky-500 hover:bg-white hover:text-kky-500 "
@@ -70,11 +72,7 @@ const Header = () => {
             <div className="flex items-center justify-between">
               <Link to="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto"
-                  src={logo2}
-                  alt="company logo"
-                />
+                <img className="h-8 w-auto" src={logo2} alt="company logo" />
               </Link>
               <button
                 type="button"
@@ -91,9 +89,11 @@ const Header = () => {
                   {navigation.map((item) => (
                     <NavLink
                       key={item.name}
-                     to={item.to}
+                      to={item.to}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      style={({ isActive }) => ({ color: isActive ? "blue" : "black" })}
+                      style={({ isActive }) => ({
+                        color: isActive ? "blue" : "black",
+                      })}
                     >
                       {item.name}
                     </NavLink>
@@ -103,9 +103,8 @@ const Header = () => {
                   <Link
                     to="/"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 capitalize"
-                   
                   >
-                   book a session
+                    book a session
                   </Link>
                 </div>
               </div>

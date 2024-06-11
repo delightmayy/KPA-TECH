@@ -9,6 +9,7 @@ import HomeWhy from "./component/HomeWhy";
 import TestiMony from "./component/TestiMony";
 import HomeContact from "./component/HomeContact";
 
+
 const Home = () => {
   return (
     <>
@@ -19,8 +20,9 @@ const Home = () => {
       <HomeBerkey />
       <HomeCrowdeck />
       <HomeWhy />
-      <TestiMony />
+     <TestiMony />
       <HomeContact/>
+     
     </>
   );
 };

@@ -18,8 +18,8 @@ const HomeWhy = () => {
         <div className="grid grid-flow-row md:grid-cols-2 mx-6 gap-4  ">
           {items.map((x) => {
             return (
-              <div key={x.id} className="p-4  py-6  rounded-md shadow-slate-400 shadow-sm bg-white flex flex-col gap-4 ">
-                <img src={x.image} alt="" width={60}  className="mx-auto"/>
+              <div key={x.id} className="p-4  py-6 lg:px-6 rounded-md shadow-slate-400 shadow-sm bg-white flex flex-col gap-4 ">
+                <img src={x.image} alt="" width={60}  className="mx-auto mt-3 md:mt-7"/>
                 <h3 className="text-center font-bold ">{x.title}</h3>
                 <p className="text-center text-sm md:text-base md:mb-2">{x.text}</p>''
               </div>
@@ -29,27 +29,27 @@ const HomeWhy = () => {
         <div className="grid grid-flow-row md:grid-cols-3 px-4 md:mt-8 gap-4">
           <div className="p-2">
             <h3 className="text-center font-extrabold text-2xl ">1M+</h3>
-            <p className=" text-sm md:text-base md:text-center mt-2">
+            <p className=" text-sm md:text-base md:text-center mt-2 md:mt-6">
               Customers visit KPA.Tech every month to get their service done.
             </p>
           </div>
           <div className="p-2">
             <h3 className="text-center font-extrabold text-2xl ">92%</h3>
-            <p className=" text-sm md:text-base md:text-center mt-2">
+            <p className=" text-sm md:text-base md:text-center mt-2 md:mt-6">
               Customers visit KPA.Tech every month to get their service done.
             </p>
           </div>
           <div className="p-2 ">
             <h3 className="text-center font-extrabold text-2xl ">4.9/5.0</h3>
-            <p className=" text-sm md:text-base md:text-center mt-2">Average customer ratings we have got all over internet.</p>
-            <img src={icon6} alt="" className=" hidden md:block md:absolute -left-2 bottom-40" width={50} />
+            <p className=" text-sm md:text-base md:text-center mt-2 md:mt-6">Average customer ratings we have got all over internet.</p>
+            <img src={icon6} alt="" className=" hidden md:block md:absolute -left-2 lg:-left-6 bottom-40" width={50} />
            
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between p-4 px-6 ">
           <div className="p-1 md:w-2/4">
             <h3 className="text-center font-bold md:text-start text-lg pb-2">Ready to launch your next project?</h3>
-            <p className=" text-sm md:text-base  mt-2 text-pretty md:text-start">
+            <p className=" text-sm md:text-base  mt-2 md:mt-6 text-pretty md:text-start">
               Contact us today to learn more about how we can help you achieve
               your business objectives.
             </p>

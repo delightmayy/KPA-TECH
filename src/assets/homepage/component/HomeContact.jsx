@@ -3,7 +3,7 @@ import msgicon from "../img/contact/msgicon.png";
 import bg from "../img/contact/contactbg.png";
 
 const HomeContact = () => {
-    console.log(bg);
+   
   return (
     <section className="bg-[url('/src/assets/homepage/img/contact/contactbg.png')] bg-cover">
       <div className="flex flex-col p-4  max-w-7xl mx-auto ">
