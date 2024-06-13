@@ -57,7 +57,7 @@ const OurService = () => {
               <img
                 src={`/src/assets/homepage/img/service${imgstate}.png`}
                 alt=""
-                width={500}
+                width={500} height="auto"
               />
             </div>
           </div>
