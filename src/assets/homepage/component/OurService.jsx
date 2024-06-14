@@ -52,7 +52,7 @@ const OurService = () => {
 
             <div className="p-2 md:grid flex flex-col order-1  md:col-span-1 justify-center my-auto items-center">
               <img
-                src="/src/assets/homepage/img/service1.png"
+                src={`/src/assets/homepage/img/service${imgstate}.png`}
                 alt=""
                 width={500}
               
