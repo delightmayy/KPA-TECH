@@ -9,9 +9,9 @@ import { useState } from "react";
 
 const HeroPort = () => {
   const [handleShow, sethandleShow] = useState(1);
-  const initRef = useRef()
+
  
-console.log(handleShow)
+
 const tabIteem = [
   {
     title: "All Project"

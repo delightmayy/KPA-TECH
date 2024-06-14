@@ -25,12 +25,12 @@ const OurService = () => {
           <div className="p-3 lg:grid flex flex-col-reverse lg:grid-cols-2 md:m-6">
             <div className="p-2 md:col-span-1 grid grid-flow-row">
               {serviceData.map((x) => {
-                return (
+                 return (
                   <div
-                    key={x.img}
+                    key={x.id}
                     className=" flex flex-col gap-2 my-3 md:my-6 px-2 self-justify "
                     id={x.id}
-                    style={{
+                     style={{
                       color: x.id == imgstate ? "#0095ff" : "black",
                       borderLeft:
                         x.id == imgstate ? "2px solid #0095ff" : "none",
@@ -42,10 +42,7 @@ const OurService = () => {
                     <h3 className=" font-semibold" id={x.id}>
                       {x.title}
                     </h3>
-                    <p
-                      className="leading-6   md:text-base"
-                      id={x.id}
-                    >
+                    <p className="leading-6   md:text-base" id={x.id}>
                       {x.text}
                     </p>
                   </div>
@@ -55,9 +52,10 @@ const OurService = () => {
 
             <div className="p-2 md:grid flex flex-col order-1  md:col-span-1 justify-center my-auto items-center">
               <img
-                src={`/src/assets/homepage/img/service${imgstate}.png`}
+                src='/src/assets/homepage/img/service1.png'
                 alt=""
-                width={500}
+                width={500} height="auto"
+              
               />
             </div>
           </div>

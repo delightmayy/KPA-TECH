@@ -9,7 +9,7 @@ const Service = () => {
       <Header />
       <div className="flex flex-col max-w-7xl p-4 mx-auto px-8">
         <div className="flex flex-col-reverse md:grid grid-cols-2 text-black p-8 md:py-10  ">
-          <div className="flex flex-col gap-8 my-auto items-center justify-center md:justify-start p-2">
+          <div className="flex flex-col gap-8 my-autogit stat items-center justify-center md:justify-start p-2">
             <div className="flex">
               <span className=" text-5xl md:text-8xl text-sky-800">o</span>
               <h2 className=" mt-3 md:mt-10 text-3xl md:text-5xl text-center md:text-start">
