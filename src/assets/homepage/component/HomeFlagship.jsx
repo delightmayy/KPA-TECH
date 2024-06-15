@@ -5,15 +5,27 @@ import flag3 from "../img/flagimg/Image.png";
 import flag4 from "../img/flagimg/flag4.png";
 import flagBG from "../img/flagimg/flagBG.png";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/16/solid";
+import { animate, motion, spring } from "framer-motion";
 
 const HomeFlagship = () => {
- 
   return (
-    <>
-      <section className=" bg-[url('/src/assets/homepage/img/flagimg/BG.png')] bg-cover -my-3 lg:-mb-6">
+    <motion.section
+     
+    >
+      <div className=" bg-[url('/src/assets/homepage/img/flagimg/BG.png')] bg-cover -my-3 lg:-mb-6">
         <div className="  mx-auto max-w-7xl sm:-mt-3  flex flex-col gap-4">
-          <div className="p-4 md:px-8 md:pt-10 lg:p-16 flex flex-col items-start sm:grid sm:grid-cols-2 text-white mt-8  bg-[/src/assets/homepage/img/crowdeck/crow-bg1.png]">
-            <div className="flex flex-col justify-center sm:items-start text-center sm:text-start items-center mx-auto lg:gap-6">
+          <div className="p-4 md:px-8 md:pt-10 lg:p-16 flex flex-col items-start sm:grid sm:grid-cols-2 text-white mt-8  bg-[/src/assets/homepage/img/crowdeck/crow-bg1.png] overflow-x-hidden">
+            < motion.div
+             variants={{
+              initial: {x:-300 },
+              animate: {x: 0 },
+            
+            }}
+            initial="initial"
+          whileInView="animate"
+           transition ={ { duration:0.8, type: spring , delay:0.2}}
+            
+            className="flex flex-col justify-center sm:items-start text-center sm:text-start items-center mx-auto lg:gap-6">
               <button className="border hidden md:block rounded-2xl w-1/3 mx-4 p-1  hover:bg-white hover:text-sky-400 ">
                 portfolio
               </button>
@@ -49,26 +61,34 @@ const HomeFlagship = () => {
                   />
                 </button>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="p-2 mx-auto mt-8 mb-6 sm:mx-0 flex justify-center pb-16 items-center  ">
-              <img src={flag3} alt="" width={240}  className="lg:-ms-20"/>
-            </div>
+            <motion.div
+            variants={{
+              initial: {x:200 },
+              animate: {x: 0 },
+            
+            }}
+            initial="initial"
+          whileInView="animate"
+           transition ={ { duration:0.8, type: spring , delay:0.2}}
+             className="p-2 mx-auto mt-8 mb-6 sm:mx-0 flex justify-center pb-16 items-center  ">
+              <img src={flag3} alt="" width={240} className="lg:-ms-20" />
+            </motion.div>
           </div>
-          
         </div>
-
-      </section>
+      </div>
       <div className="w-full hidden lg:block bg-gradient-to-bl to-[#2554B7] from-[#157dcd] lg:-mt-48   ">
-            <img src={flag4} alt="" className="w-full" />
-          </div>
-    </>
+        <img src={flag4} alt="" className="w-full" />
+      </div>
+    </motion.section>
   );
 };
 
 export default HomeFlagship;
 
-{/* <section className="bg-[url('/src/assets/homepage/img/flagimg/BG.png')]  bg-cover -mt-3 ">
+{
+  /* <section className="bg-[url('/src/assets/homepage/img/flagimg/BG.png')]  bg-cover -mt-3 ">
   <div className="pt-8  mx-auto max-w-7xl flex flex-col gap-4">
     <div className="p-4 md:px-8  flex flex-col items-start sm:grid sm:grid-cols-2 text-white ">
       <div className="p-2 mx-auto mt-8 sm:mx-0 flex justify-center items-center ">
@@ -77,4 +97,5 @@ export default HomeFlagship;
     </div>
   </div>
 </section>;
- */}
+ */
+}

@@ -1,13 +1,19 @@
 import React from "react";
 import Header from "../../generalcomp/Header";
 import bg from "../heroimg/aboutbg.png"
+import { motion } from "framer-motion";
 
 const AboutHero = () => {
+
   console.log(bg);
   return (
     <div className=" bg-[url('/src/assets/aboutuspage/heroimg/aboutbg.png')] bg-cover   ">
       <Header />
-      <div className="relative  px-3 pt-6  lg:px-8 md:pt-8 lg:pt-16 mx-auto max-w-7xl ">
+      <motion.div
+       initial={{ scale: 0.4 }}
+       animate={{ scale: 1 }}
+       transition={{ duration: 0.6 }}
+        className="relative  px-3 pt-6  lg:px-8 md:pt-8 lg:pt-16 mx-auto max-w-7xl ">
         <div className="mx-auto max-w-2xl ">
           <div className="text-center text-white w-3/4 mx-auto flex flex-col gap-6 lg:gap-14 py-10 sm:py-20  md:py-20 lg:py-16 ">
             <h1 className="text2xl font-bold tracking-tight md:text-3xl lg:text-4xl">
@@ -28,7 +34,7 @@ const AboutHero = () => {
           </div>
         
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -2,13 +2,19 @@ import React from 'react'
 import flag1 from "../portimg/flag1.png";
 import flag3 from "../portimg/flag3.png";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { motion } from 'framer-motion';
 
 const PortFlag = () => {
+  
   return (
     <section className=" mx-auto max-w-7xl  ">
     <div className=" bg-[url('src/assets/portfoliopage/portimg/flagbg.png')]  bg-cover   ">
 
-      <div className="  mx-auto max-w-7xl flex flex-col gap-4   ">
+      <motion.div
+       initial={{ scale: 0.6 }}
+       whileInView={{ scale: 1 }}
+       transition={{ duration: 1.3 }}
+       className="  mx-auto max-w-7xl flex flex-col gap-4   ">
         <div className="p-4 md:px-8 md:ms-16 md:pt-10 lg:p-16 flex flex-col items-start sm:grid sm:grid-cols-2 text-black mt-8  bg-[/src/assets/homepage/img/crowdeck/crow-bg1.png]">
           <div className="flex flex-col justify-center sm:items-start text-center sm:text-start items-center mx-auto lg:gap-6">
             <button className="border border-black hidden md:block rounded-2xl w-1/3 mx-4 p-1  hover:bg-white hover:text-sky-400 ">
@@ -52,7 +58,7 @@ const PortFlag = () => {
             <img src={flag3} alt="" width={240} className="" />
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   </section>
   )

@@ -4,7 +4,9 @@ import img2 from "../heroimg/process/process2.png";
 import img3 from "../heroimg/process/process3.png";
 import img4 from "../heroimg/process/process4.png";
 import img5 from "../heroimg/process/process5.png";
+import { motion } from "framer-motion";
 const Process2 = () => {
+  
   return (
     <section className="bg-[#E9ECEE]">
       <div className="max-w-7xl mx-auto flex flex-col px-4">
@@ -14,9 +16,13 @@ const Process2 = () => {
           <p className=" text-center md:text-start">We follow a meticulous process that ensures transparency, collaboration, and, most importantly, the delivery of high-quality solutions that exceed expectations.</p>
         </div>
 
-        <div>
-          <div className="   md:grid md:grid-cols-8 p-8 bg-white md:bg-[#E9ECEE] ">
-            <div className=" bg-white rounded-lg  shadow-inner shadow-slate-400 flex flex-col  md:col-span-5 md:pe-16   p-8 gap-4">
+        <motion.div
+        variants={{ scale: { scale: 0.9 }, initial: { scale: 1 } }}
+        whileInView="scale"
+        initial="initial">
+          <div  className="   md:grid md:grid-cols-8 p-8 bg-white md:bg-[#E9ECEE] ">
+            <div
+             className=" bg-white rounded-lg  shadow-inner shadow-slate-400 flex flex-col  md:col-span-5 md:pe-16   p-8 gap-4">
               <h1 className="text-center md:text-start text-8xl font-bold text-[#e0e0e0]">
                 01
               </h1>
@@ -38,8 +44,11 @@ const Process2 = () => {
               className=" rounded-lg w-4/5 mx-auto md:w-full md:h-5/6 col-span-3 md:my-auto md:-ms-8 lg:-ms-16  z-10 -mt-8   "
             />
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+        variants={{ scale: { scale: 0.9 }, initial: { scale: 1 } }}
+        whileInView="scale"
+        initial="initial">
           <div className="flex flex-col-reverse   md:grid md:grid-cols-8 p-8 bg-white md:bg-[#E9ECEE] ">
             <img
               src={img2}
@@ -65,9 +74,12 @@ const Process2 = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div
+        variants={{ scale: { scale: 0.9 }, initial: { scale: 1 } }}
+        whileInView="scale"
+        initial="initial">
           <div className="   md:grid md:grid-cols-8 p-8 bg-white md:bg-[#E9ECEE] ">
             <div className=" bg-white rounded-lg shadow-inner shadow-slate-400 flex flex-col  md:col-span-5 md:pe-16   p-8 gap-4">
               <h1 className="text-center md:text-start text-8xl font-bold text-[#e0e0e0]">
@@ -91,8 +103,11 @@ const Process2 = () => {
               className=" rounded-lg w-4/5 mx-auto md:w-full md:h-5/6 col-span-3 md:my-auto md:-ms-8 lg:-ms-16  z-10  -mt-8"
             />
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+        variants={{ scale: { scale: 0.9 }, initial: { scale: 1 } }}
+        whileInView="scale"
+        initial="initial">
           <div className=" flex flex-col-reverse  md:grid md:grid-cols-8 p-8 bg-white md:bg-[#E9ECEE] ">
             <img
               src={img4}
@@ -117,8 +132,11 @@ const Process2 = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+        variants={{ scale: { scale: 0.9 }, initial: { scale: 1 } }}
+        whileInView="scale"
+        initial="initial">
           <div className="   md:grid md:grid-cols-8 p-8 bg-white md:bg-[#E9ECEE] ">
             <div className=" bg-white rounded-lg shadow-inner shadow-slate-400 flex flex-col  md:col-span-5 md:pe-16   p-8 gap-4">
               <h1 className="text-center md:text-start text-8xl font-bold text-[#e0e0e0]">
@@ -142,7 +160,7 @@ const Process2 = () => {
               className=" rounded-lg w-4/5 mx-auto md:w-full md:h-5/6 col-span-3 md:my-auto md:-ms-8 lg:-ms-16  z-10 -mt-8 "
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

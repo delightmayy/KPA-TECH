@@ -5,11 +5,24 @@ import berkey22 from "../img/berkey/Group 173.png";
 import berkey3 from "../img/berkey/berkey3.png";
 
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/16/solid";
+import { motion,spring } from "framer-motion";
 
 const HomeBerkey = () => {
   return (
-    <section className="bg-[#EFF2F5] bg-cover -mt-4 ">
-      <div className="p-4 max-w-7xl mx-auto px-6 md:px-8 md:pt-10 lg:p-16 flex flex-col items-start md:grid grid-cols-2 text-black ">
+    <section
+      
+      className="bg-[#EFF2F5] bg-cover -mt-4 "
+    >
+      <motion.div
+      variants={{
+        initial: { scale: 0.5 },
+        animate: { scale: 1 },
+        transition: { duration: 0.6, type: spring },
+      }}
+      initial="initial"
+      whileInView="animate"
+      transition="transition"
+      className="p-4 max-w-7xl mx-auto px-6 md:px-8 md:pt-10 lg:p-16 flex flex-col items-start md:grid grid-cols-2 text-black ">
         <div className=" flex flex-col gap-4 md:gap-6  mb-4lg:gap-8 my-8 lg:mb-24">
           <div className="text flex flex-col p-4 gap-4  lg:gap-8 justify-center md:justify-start">
             <img
@@ -48,30 +61,13 @@ const HomeBerkey = () => {
         </div>
 
         <div className=" mx-auto md:mt-12 lg:mt-8 gap-0 sm:mx-0 flex flex-col justify-center items-center ">
-           <div className="md:mt-0">
+          <div className="md:mt-0">
             <img src={berkey22} alt="" />
-           </div>
+          </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
 
 export default HomeBerkey;
-/* md:block md:ps-8 md:z-30  md:mt-20 
-z-10 lg:bottom-40 md:mt-6 lg:mt-0 md:bottom-24 md:right-4 lg:right*/
-
-{/* <div className="flec flex-col justify-center lg:justify-start mt-20 sm:mt-0 items-center relative">
-            <img
-              src={berkey2}
-              alt=""
-              width={600}
-              className=" md:absolute  sm:mt-28   lg:mt-30 left-6 lg:left-8"
-            />
-            <img
-              src={berkey3}
-              alt=""
-              width={600}
-              className=" lg:-mt-12 md:static md:z-20 absolute -top-24 -left-6 "
-            />
-          </div> */}

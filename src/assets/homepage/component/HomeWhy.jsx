@@ -2,10 +2,12 @@ import React from "react";
 import { items } from "../data/whyusData";
 import icon5 from "../img/whyus/top.png"
 import icon6 from "../img/whyus/bottom.png"
+import { motion } from "framer-motion";
 
 
  
 const HomeWhy = () => {
+ 
   return (
     <section className="bg-[#f4f7faed]
     ">
@@ -18,11 +20,24 @@ const HomeWhy = () => {
         <div className="grid grid-flow-row md:grid-cols-2 mx-6 gap-4  ">
           {items.map((x) => {
             return (
-              <div key={x.id} className="p-4  py-6 lg:px-6 rounded-md shadow-slate-400 shadow-sm bg-white flex flex-col gap-4 ">
-                <img src={x.image} alt="" width={60}  className="mx-auto mt-3 md:mt-7"/>
+              <motion.div
+              variants={{scale:{scale:0.9},
+            initial:{scale:0}
+          }}
+          whileInView="scale"
+          initial="initial"
+               key={x.id} className="p-4  py-6 lg:px-6 rounded-md shadow-slate-400 shadow-sm bg-white flex flex-col gap-4 ">
+                <motion.img 
+                 variants={{rotate:{rotateY:"-180deg"},
+                 initial:{rotate:"0deg"}}}
+                 whileInView="rotate"
+                 initial="initial"
+                 transition={{duration:2, delay:1, repeat:Infinity}}
+
+                 src={x.image} alt="" width={60}  className="mx-auto mt-3 md:mt-7"/>
                 <h3 className="text-center font-bold ">{x.title}</h3>
                 <p className="text-center text-sm md:text-base md:mb-2">{x.text}</p>''
-              </div>
+              </motion.div>
             );
           })}
         </div>

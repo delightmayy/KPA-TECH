@@ -1,8 +1,10 @@
 import React from "react";
 import msgicon from "../img/contact/msgicon.png";
 import bg from "../img/contact/contactbg.png";
+import { motion } from "framer-motion";
 
 const HomeContact = () => {
+ 
    
   return (
     <section className="bg-[url('/src/assets/homepage/img/contact/contactbg.png')] bg-cover">
@@ -13,7 +15,15 @@ const HomeContact = () => {
               className="flex flex-col mx-auto text-center justify-center md:text-start md:justify-start md:mt-20  gap-4 text-white md:w-2/3
                 "
             >
-              <img src={msgicon} alt="" width={75} className="mx-auto md:mx-0" />
+              <motion.img 
+               variants={{rotate:{rotateY:"-180deg"},
+               initial:{rotate:"0deg"}}}
+               whileInView="rotate"
+               initial="initial"
+               transition={{duration:2, delay:3, repeat:Infinity}}
+
+
+               src={msgicon} alt="" width={75} className="mx-auto md:mx-0" />
               <h4 className=" capitalize text-lg md:text-2xl font-bold text-nowrap">get in touch with us</h4>
               <p  className=" text-sm md:text-base leading-6 px-2">
               We're dedicated to providing exceptional service and support to every client, and we can't wait to assist you with your digital needs.
@@ -21,7 +31,13 @@ const HomeContact = () => {
             </div>
           </div>
           <div className="p-8 ">
-            <div
+            <motion.div
+             variants={{scale:{scale:1},
+             initial:{scale:0}
+           }}
+           whileInView="scale"
+           initial="initial"
+           transition={{duration:1}}
               className="flex flex-col mx-auto  md:bg-white md:rounded-xl md: py-3 md:px-6 md:w-ful lg:w-2/3
                 "
             >
@@ -114,7 +130,7 @@ const HomeContact = () => {
               </form>
 
              
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

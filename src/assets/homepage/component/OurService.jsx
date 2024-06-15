@@ -4,12 +4,15 @@ import service2 from "../img/service2.png";
 import service3 from "../img/service3.png";
 import service4 from "../img/service4.png";
 import { serviceData } from "../data/serviceData";
+import { AnimatePresence, motion, spring } from "framer-motion";
+
+
 
 const OurService = () => {
   const [imgstate, setimgstate] = useState(1);
 
   return (
-    <section>
+    <motion.section initial={{opacity:0, background:"blue" }}  whileInView={{opacity:[0, 0.2, 0.5,1],background:"white"}} transition={{duration:1}}>
       <div className="flex flex-col bg-white p-2 text-center sm:text-start sm:py-4 sm:px-6 ">
         <div className="flex  max-w-7xl flex-col justify-center items-center mx-auto ">
           <div className="p-3 gap-4  text-center text-black flex flex-col">
@@ -28,7 +31,7 @@ const OurService = () => {
                  return (
                   <div
                     key={x.id}
-                    className=" flex flex-col gap-2 my-3 md:my-6 px-2 self-justify "
+                    className=" flex flex-col gap-2 my-3 md:my-6 px-2 self-justify cursor-pointer "
                     id={x.id}
                      style={{
                       color: x.id == imgstate ? "#0095ff" : "black",
@@ -51,12 +54,18 @@ const OurService = () => {
             </div>
 
             <div className="p-2 md:grid flex flex-col order-1  md:col-span-1 justify-center my-auto items-center">
-              <img
+            <AnimatePresence>
+              <motion.img
+                animate={{rotate:["0deg","8deg","0deg","-8deg","0deg"]}}
+              transition={{duration:0.8, type:spring}}
+              whileHover={{  rotate:["0deg","8deg","0deg","-8deg","0deg"],scale:0.8}}
+              exit={{scale:0.2}}
+              whileInView={ {rotate:["0deg","8deg","0deg","-8deg","0deg"]}}
                 src={`/src/assets/homepage/img/service${imgstate}.png`}
                 alt=""
                 width={500}
               
-              />
+              /></AnimatePresence>
             </div>
           </div>
 
@@ -70,7 +79,7 @@ const OurService = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

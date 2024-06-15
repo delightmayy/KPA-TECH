@@ -1,11 +1,15 @@
 import React from "react";
 import Header from "../../generalcomp/Header";
+import { motion } from "framer-motion";
+
 
 const HomeHero = () => {
+ 
   return (
     <div className="bg-[rgba(44,44,44,0.77)]  ">
       <Header/>
-      <div className="relative  px-6 pt-8 lg:pt-0 lg:px-8">
+      <motion.div
+      initial={{scale:0.4}} animate={{scale:1}} transition={{duration:0.6}} className="relative  px-6 pt-8 lg:pt-0 lg:px-8">
         <div className="mx-auto max-w-2xl py-20 sm:py-10 lg:py-16 xl:py-32">
           <div className="text-center text-white">
             <h1 className="text2xl font-bold tracking-tight md:text-4xl lg:text-4xl">
@@ -17,12 +21,15 @@ const HomeHero = () => {
               capabilities.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+              <motion.a
+              initial={{backgroundColor:"#0394C3"}}
+                whileInView={{backgroundColor:["#0394C3"]}}
+                transition={{  duration:5, times:[1,3]}}
                 href="#"
-                className="rounded-md bg-sky-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-sky-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-transparent hover:border hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Book a session
-              </a>
+              </motion.a>
               <a
                 href="#"
                 className="text-sm font-semibold leading-6 border py-2 px-4 rounded-lg hover:bg-sky-500"
@@ -38,7 +45,7 @@ const HomeHero = () => {
                 <div className="p-3 border-b-4 text-center text-white text-base border-gray-400 hover:border-sky-600">Tab 4</div>
             </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

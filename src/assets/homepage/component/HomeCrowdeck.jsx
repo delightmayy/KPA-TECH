@@ -4,16 +4,20 @@ import crow2 from "../img/crowdeck/crow-gal.png";
 import crow3 from "../img/crowdeck/crow-bg1.png";
 import crow4 from "../img/crowdeck/App Store.png";
 import crow5 from "../img/crowdeck/Play Store.png";
+import { motion } from "framer-motion";
 
 const HomeCrowdeck = () => {
-   
   return (
-    <section className="bg-[url('/src/assets/homepage/img/crowdeck/crow-bg1.png')] bg-cover"   >
+    <motion.section
+   
+      initial={ {opacity: 0 ,backgroundColor:'#0000'}}
+      whileInView={{ opacity:1 }}
+      transition={{ duration:2 }}
+      className="bg-[url('/src/assets/homepage/img/crowdeck/crow-bg1.png')] bg-cover"
+    >
       <div className="pt-8  mx-auto max-w-7xl sm:-mt-3  flex flex-col gap-4">
         <div className="p-4 md:px-8 md:pt-10 lg:p-16 flex flex-col items-start sm:grid sm:grid-cols-2 text-white mt-8 ">
           <div className="flex flex-col justify-center sm:items-start text-center sm:text-start items-center mx-auto lg:gap-6">
-          
-
             <div className="text flex flex-col justify-center p-4 md:px-8 gap-4 lg:gap-6">
               <img src={crow1} alt="" width={100} className="mx-auto sm:mx-0" />
               <h4 className=" font-semibold text-center sm:text-start ">
@@ -32,8 +36,8 @@ const HomeCrowdeck = () => {
             <div className="px-4 md:px-8 flex flex-col gap-2">
               <p className="text-sm">Download our app</p>
               <div className="flex justify-center md:justify-start gap-4  ">
-                <img src={crow4}alt="" className="w-1/3" />
-                <img src={crow5}alt=""  className="w-1/3"/>
+                <img src={crow4} alt="" className="w-1/3" />
+                <img src={crow5} alt="" className="w-1/3" />
               </div>
             </div>
           </div>
@@ -43,8 +47,7 @@ const HomeCrowdeck = () => {
           </div>
         </div>
       </div>
-    
-    </section>
+    </motion.section>
   );
 };
 export default HomeCrowdeck;
