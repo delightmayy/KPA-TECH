@@ -1,9 +1,6 @@
 import React from "react";
 import { items } from "../data/whyusData";
-import icon1 from "../img/whyus/Icon1.png";
-import icon2 from "../img/whyus/Icon2.png";
-import icon3 from "../img/whyus/Icon3.png";
-import icon4 from "../img/whyus/Icon4.png";
+
 import icon5 from "../img/whyus/top.png";
 import icon6 from "../img/whyus/bottom.png";
 import { motion } from "framer-motion";
@@ -28,7 +25,6 @@ const HomeWhy = () => {
             alt=""
             className=" hidden md:block md:absolute right-5 "
             width={80}
-
           />
         </div>
         <div className="grid grid-flow-row md:grid-cols-2 mx-6 gap-4  ">
@@ -49,7 +45,9 @@ const HomeWhy = () => {
                   whileInView="rotate"
                   initial="initial"
                   transition={{ duration: 2, delay: 1, repeat: Infinity }}
-                  src={x.id===1? icon1: x.id===2? icon2:x.id===3? icon3:icon4}
+                  src={
+                   x.image
+                  }
                   alt=""
                   width={60}
                   className="mx-auto mt-3 md:mt-7"

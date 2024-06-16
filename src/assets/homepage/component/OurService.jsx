@@ -70,7 +70,15 @@ const OurService = () => {
                   whileInView={{
                     rotate: ["0deg", "8deg", "0deg", "-8deg", "0deg"],
                   }}
-                  src={(imgstate===1)? service1:(imgstate===2)? service2:(imgstate===3)? service3:service4}
+                  src={
+                    imgstate === 1
+                      ? service1
+                      : imgstate === 2
+                      ? service2
+                      : imgstate === 3
+                      ? service3
+                      : service4
+                  }
                   alt=""
                   width={500}
                 />

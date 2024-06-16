@@ -1,18 +1,21 @@
 import React from "react";
 import flag1 from "../portimg/flag1.png";
 import flag3 from "../portimg/flag3.png";
+import flagbg from "../portimg/flagbg.png";
+
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 
 const HeroPort2 = () => {
- 
+  console.log(flagbg);
+  
   return (
     <section className=" relative mx-auto py-96 max-w-7xl   pt-60 mb-80 md:mb-0">
-      <div className=" -top-4 md:-top-24 bg-[url('src/assets/portfoliopage/portimg/flagbg.png')]  bg-cover md:mx-20 absolute rounded-md   ">
+      <div className="-translate-y-60 md:-translate-y-96 bg-[url('/src/assets/portfoliopage/portimg/flagbg.png')]  bg-cover md:mx-20 absolute rounded-md   ">
         <motion.div
           initial={{ y: 200 }}
-          whileInView={{ y: 0 }}
-          transition={{ duration: 1 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.6 }}
           className="  mx-auto max-w-7xl sm:-mt-3  flex flex-col gap-4   "
         >
           <div className="p-4 md:px-8 md:pt-10 lg:p-16 flex flex-col items-start sm:grid sm:grid-cols-2 text-black mt-8  bg-[/src/assets/homepage/img/crowdeck/crow-bg1.png]">
