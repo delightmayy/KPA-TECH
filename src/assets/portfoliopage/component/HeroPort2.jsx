@@ -7,8 +7,6 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 
 const HeroPort2 = () => {
-  console.log(flagbg);
-  
   return (
     <section className=" relative mx-auto py-96 max-w-7xl   pt-60 mb-80 md:mb-0">
       <div className="-translate-y-60 md:-translate-y-96 bg-[url('/src/assets/portfoliopage/portimg/flagbg.png')]  bg-cover md:mx-20 absolute rounded-md   ">
